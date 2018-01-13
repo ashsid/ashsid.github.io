@@ -20,7 +20,7 @@ body{font-family:'Raleway', sans-serif;}
 #header{font-size: 40px;letter-spacing: 2px;}
 #header:hover{transform:scale(1.2);transition: 0.3s all ease-in-out .1s;}
 .modal-login {		
-		color: #636363;
+		color: #f96d00;
 		width: 350px;
 	}
 	.modal-login .modal-content {
@@ -72,7 +72,7 @@ body{font-family:'Raleway', sans-serif;}
 		height: 95px;
 		border-radius: 50%;
 		z-index: 9;
-		background: #60c7c1;
+		background: #f96d00;
 		padding: 15px;
 		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 	}
@@ -85,14 +85,14 @@ body{font-family:'Raleway', sans-serif;}
     .modal-login .btn {
         color: #fff;
         border-radius: 4px;
-		background: #60c7c1;
+		background: #f96d00;
 		text-decoration: none;
 		transition: all 0.4s;
         line-height: normal;
         border: none;
     }
 	.modal-login .btn:hover, .modal-login .btn:focus {
-		background: #45aba6;
+		background: #f5841a;
 		outline: none;
 	}
 	.trigger-btn {
@@ -154,26 +154,13 @@ body{font-family:'Raleway', sans-serif;}
             transition: 2s all ease-in-out .1s; 
 }
 .fade-carousel .carousel-inner .item.active .hero {
-    opacity: 1;
+    opacity: 1.0;
     -webkit-transition: 2s all ease-in-out .1s;
        -moz-transition: 2s all ease-in-out .1s; 
         -ms-transition: 2s all ease-in-out .1s; 
          -o-transition: 2s all ease-in-out .1s; 
             transition: 2s all ease-in-out .1s;    
 }
-
-/********************************/
-/*            Overlay           */
-/********************************/
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: #080d15;
-    opacity: 0.7;
-}
-
 /********************************/
 /*          Custom Buttons      */
 /********************************/
@@ -202,12 +189,15 @@ body{font-family:'Raleway', sans-serif;}
 }
 .fade-carousel .slides .slide-1 {
   background-image: url(b2.jpg); 
+  opacity: 0.8;
 }
 .fade-carousel .slides .slide-2 {
   background-image: url(b1.jpg);
+  opacity: 0.8;
 }
 .fade-carousel .slides .slide-3 {
   background-image: url(b3.jpg);
+  opacity: 0.8;
 }
 
 /********************************/
@@ -274,9 +264,6 @@ body{font-family:'Raleway', sans-serif;}
 </head>
 <body>
 <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <!-- Overlay -->
-  <div class="overlay"></div>
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#bs-carousel" data-slide-to="1"></li>
@@ -292,7 +279,7 @@ body{font-family:'Raleway', sans-serif;}
             <h1>We are creative</h1>        
             <h3>Welcome to the handcrafted world</h3>
         </hgroup>
-        <button class="btn btn-hero btn-lg" role="button" data-toggle="modal" id="login" >LOG IN</button>
+        <a class="btn btn-hero btn-lg" role="button" data-toggle="modal" href="#myModal" id="login" >LOG IN</a>
       </div>
     </div>
     <div class="item slides">
@@ -316,11 +303,11 @@ body{font-family:'Raleway', sans-serif;}
       </div>
     </div> 
     <a class="carousel-control left" href="#bs-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         </a>
         <a class="carousel-control right" href="#bs-carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>   
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
   </div> 
 </div>
 <div id="myModal" class="modal fade">
@@ -349,6 +336,7 @@ body{font-family:'Raleway', sans-serif;}
 			<div class="modal-footer">
 				<a href="#">Forgot Password?</a>
 			</div>
+      <br>
       <div class="modal-footer">
         <a href="#">Sign Up</a>
       </div>
