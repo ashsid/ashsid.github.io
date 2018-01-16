@@ -67,7 +67,7 @@
     min-width: 140px;
     }
   .signup-form .btn:hover, .signup-form .btn:focus{
-    background: #2389cd !important;
+    background: #f5841a !important;
         outline: none;
   }
     .signup-form a{
@@ -93,7 +93,6 @@
 <body>
 <div class="container">
 <div class="signup-form" id="signup">
-    <form action="abc.php" method="post">
     <h2>Sign Up</h2>
     <p>Please fill in this form to create an account</p>
     <hr>
@@ -104,26 +103,26 @@
       </div>          
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+          <input type="email" class="form-control" name="email" placeholder="Email" required="required" id="signupemail">
         </div>
     <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required" id="signuppassword">
         </div>
     <div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required" >
         </div>        
         <div class="form-group">
       <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
     </div>
     <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            <button type="button" id="signupbtn" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
-    </form>
   <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 </script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
