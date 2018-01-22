@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Kris Designs</title>
-
+         <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -18,7 +18,7 @@ body {
     color:#000;
     background-image: linear-gradient(90deg, #ff9000, #FFFFFF);
 }
-
+img{margin-top:10px;}
 p {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
@@ -140,12 +140,12 @@ ul ul a {
     MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
-    #sidebar {
+  /*  #sidebar {
         margin-left: -250px;
     }
     #sidebar.active {
         margin-left: 0;
-    }
+    }*/
     #sidebarCollapse span {
         display: none;
     }
@@ -157,7 +157,7 @@ ul ul a {
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Store</h3>
+                    <h3 style="font-family: 'Joti One',sans-serif;">KRIS DESIGNS</h3>
                 </div>
 
                 <ul class="list-unstyled components">
@@ -166,28 +166,28 @@ ul ul a {
                     <li class="active">
                         <a href="#menSubmenu" data-toggle="collapse" aria-expanded="false">Men</a>
                         <ul class="collapse list-unstyled" id="menSubmenu">
-                            <li><a href="#wallets">Wallet</a></li>
-                            <li><a href="#laptopbags">Laptop bags</a></li>
-                            <li><a href="#wristbands">Wrist Bands</a></li>
-                            <li><a href="#cardholders">Visiting card holders</a></li>
-                            <li><a href="#belts">Belts</a></li>
+                            <li class="change"><a href="#wallets">Wallet</a></li>
+                            <li class="change"><a href="#laptopbags">Laptop bags</a></li>
+                            <li class="change"><a href="#wristbands">Wrist Bands</a></li>
+                            <li class="change"><a href="#cardholders">Visiting card holders</a></li>
+                            <li class="change"><a href="#belts">Belts</a></li>
                         </ul>
                     </li>
                     <li>
                        <a href="#womenSubmenu" data-toggle="collapse" aria-expanded="false">Women</a>
                         <ul class="collapse list-unstyled" id="womenSubmenu">
-                            <li><a href="#totebags">Tote</a></li>
-                            <li><a href="#satchels">Satchels</a></li>
-                            <li><a href="#clutches">Clutches</a></li>
-                            <li><a href="#purses">Purses</a></li>
-                            <li><a href="#crossbags">Crossbody bags</a></li>
+                            <li class="change"><a  href="#totebags">Tote</a></li>
+                            <li class="change"><a  href="#satchels">Satchels</a></li>
+                            <li class="change"><a  href="#clutches">Clutches</a></li>
+                            <li class="change"><a  href="#purses">Purses</a></li>
+                            <li class="change"><a  href="#crossbags">Crossbody bags</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <div id="content">
 
-                <nav class="navbar navbar-default" id="navigation">
+                <nav class="navbar navbar-default navbar-fixed-top" id="navigation" style="position:fixed;margin-left: 250px;">
                     <div class="container-fluid">
 
                         <div class="navbar-header">
@@ -206,6 +206,7 @@ ul ul a {
                         </div>
                     </div>
                 </nav>
+<br><br>
 <div id="wallets">
  <h2>Wallets</h2>
  <br>
@@ -224,23 +225,9 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
 </div>
 </div>
-</div>
-  <div class="line"></div>
+<div class="line"></div>
 
 <div id="laptopbags">
     <br>
@@ -260,21 +247,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
-</div>
 </div>
 <div class="line"></div>
 <div id="wristbands">
@@ -295,20 +267,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/15.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/16.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/17.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/18.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -330,20 +288,6 @@ ul ul a {
   </div>
   <div>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
-  </div>
-  </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
   </div>
 </div>
 </div>
@@ -368,20 +312,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/16.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/17.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -402,20 +332,6 @@ ul ul a {
   </div>
   <div>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
-  </div>
-  </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/17.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
   </div>
 </div>
 </div>
@@ -440,20 +356,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -476,20 +378,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/15.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/16.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/17.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -512,20 +400,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -548,20 +422,6 @@ ul ul a {
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
-  <div class="row" style="margin-top: 10px;">
-  <div>
-    <img class="img-responsive col-md-3" src="collections/5.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/6.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/7.jpg">
-  </div>
-  <div>
-    <img class="img-responsive col-md-3" src="collections/8.jpg">
-  </div>
-</div>
 </div>
 </div>
 
@@ -570,10 +430,6 @@ ul ul a {
  </div>
         
 </div>
-
-
-
-
        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- Bootstrap Js CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -590,6 +446,29 @@ ul ul a {
                     $('#sidebar, #content').toggleClass('active');
                     $('.collapse.in').toggleClass('in');
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    if($('#navigation').css('margin-left')=='250px')
+                    {
+                        $('#navigation').css('margin-left','0px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                    else
+                    {
+                        $('#navigation').css('margin-left','250px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                });
+                $('.change').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    if($('#navigation').css('margin-left')=='250px')
+                    {
+                        $('#navigation').css('margin-left','0px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                    else
+                    {
+                        $('#navigation').css('margin-left','250px');
+                        $('#navigation').css('transition','all .3s');
+                    }
                 });
             });
         </script>
