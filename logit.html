@@ -16,6 +16,9 @@ body {
     font-family: 'Raleway', sans-serif;
     background: #fafafa;
     color:#000;
+    background-image: -webkit-gradient(90deg, #ff9000, #FFFFFF);
+    background-image: -webkit-linear-gradient(90deg, #ff9000, #FFFFFF);
+    background-image: -moz-linear-gradient(90deg, #ff9000, #FFFFFF);
     background-image: linear-gradient(90deg, #ff9000, #FFFFFF);
 }
 img{margin-top:10px;}
@@ -61,6 +64,9 @@ a, a:hover, a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
+    background-image: -webkit-gradient(180deg, #ff9000, #FFFFFF);
+    background-image: -webkit-linear-gradient(180deg, #ff9000, #FFFFFF);
+    background-image: -moz-linear-gradient(180deg, #ff9000, #FFFFFF);
     background-image: linear-gradient(180deg, #ff9000, #FFFFFF);
     transition: all 0.3s;
 }
@@ -135,7 +141,11 @@ ul ul a {
 #content.active {
     width: 100%;
 }
-
+.dropdown-item:hover{color: #fff;
+    background: #000;}
+.viewbutton{background-color: #fd6900;border-color: #fd6900;position: absolute;margin-top: 12%;margin-left: 8%;}
+.viewbutton:hover{background-color: #fd6900;border-color: #fd6900;}
+a:hover{color:#fd6900;}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -181,6 +191,13 @@ ul ul a {
                             <li class="change"><a  href="#crossbags">Crossbody bags</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false">USER</a>
+                        <ul class="collapse list-unstyled" id="userSubmenu">
+                            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-heart"></span> Favourites</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <div id="content">
@@ -193,33 +210,50 @@ ul ul a {
                                 <i class="glyphicon glyphicon-align-left"></i>
                                 <span>Collections</span>
                             </button>
+                            <button type="button" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" style="background-color: #fd6900;color:black;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
                         </div>
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a  style="color:#000;" href="#">Home</a></li>
+                                <li><a  style="color:#000;" href="logit.html">Home</a></li>
                                 <li><a  style="color:#000;" href="#">About Us</a></li>
-                                <li><a  style="color:#000;" href="#">User</a></li>
+                                <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#000;">Account <span class="glyphicon glyphicon-user"></span><span class="caret"></span></a>       
+        <ul class="dropdown-menu" role="menu">
+                <li><a href="#" >Signout</a></li>
+                <li><a href="#">Change Password</a></li>
+              </ul>                
+            </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 <br><br>
 <div id="wallets">
- <h2>Wallets</h2>
+ <h2 class="header">Wallets</h2>
+ <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/1.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
@@ -228,40 +262,50 @@ ul ul a {
 <div class="line"></div>
 
 <div id="laptopbags">
- <h2>Laptop Bags</h2>
+ <h2 class="header">Laptop Bags </h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3 " src="collections/1.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
 </div>
 <div class="line"></div>
 <div id="wristbands">
- <h2>Wrist Bands</h2>
+ <h2 class="header">Wrist Bands</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/11.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/12.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/13.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
@@ -271,20 +315,25 @@ ul ul a {
 <div class="line"></div>
 
 <div id="belts">
- <h2>Belts</h2>
+ <h2 class="header">Belts</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/11.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/12.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/13.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
 </div>
@@ -293,20 +342,25 @@ ul ul a {
 
 <div class="line"></div>
 <div id="cardholders">
- <h2>Card holders</h2>
+ <h2 class="header">Card holders</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/1.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
@@ -315,20 +369,25 @@ ul ul a {
 
 <div class="line"></div>
 <div id="totebags">
- <h2>Tote Bags</h2>
+ <h2 class="header">Tote Bags</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/11.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/22.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/13.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
 </div>
@@ -336,20 +395,25 @@ ul ul a {
 </div>
 <div class="line"></div>
 <div id="satchels">
- <h2>Satchels</h2>
+ <h2 class="header">Satchels</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/11.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/22.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/14.jpg">
   </div>
   </div>
@@ -358,20 +422,25 @@ ul ul a {
 
 <div class="line"></div>
 <div id="clutches">
- <h2>Clutches</h2>
+ <h2 class="header">Clutches</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/21.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
@@ -380,20 +449,25 @@ ul ul a {
 
 <div class="line"></div>
 <div id="purses">
- <h2>Purses</h2>
+ <h2 class="header">Purses</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/1.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
@@ -402,20 +476,25 @@ ul ul a {
 
 <div class="line"></div>
 <div id="crossbags">
- <h2>Cross Body Bags</h2>
+ <h2 class="header">Cross Body Bags</h2>
+  <a href="#" class="seemore" style="position:absolute; right:6%;">See more&#187;</a>
  <br>
  <div class="fluid-container" style="margin:20px;margin-top: 10px;">
   <div class="row">
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/1.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/2.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/3.jpg">
   </div>
   <div>
+    <a href="indprod.html" class="btn btn-info viewbutton"  role="button">VIEW</a>
     <img class="img-responsive col-md-3" src="collections/4.jpg">
   </div>
   </div>
@@ -468,6 +547,41 @@ ul ul a {
                     }
                 });
             });
+            $(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+          $("img").mouseover(function(){
+    var val=($(this).parents().eq(3).children(0).text()).split(" ")[0]+($(this).parents().eq(3).children(0).text()).split(" ")[1];
+    $(this).css("opacity","0.3");
+    $(this).prev().css("z-index",4);
+    $(this).prev().css("transition","all 0.3s");
+});
+          $("img").mouseout(function(){
+    $(this).css("opacity","1");
+    $(this).prev().css("z-index",-1);
+  });     
+      $(".viewbutton").hover(function(){
+        $(this).next().css("opacity","0.3");
+        $(this).css("z-index","4");
+      });
+      $(".change").click(function(){
+      var param=($(this).children(0).text());
+      window.location.href=("nextprod.html?producttype="+param);      
+      });
+      $(".seemore").click(function(){
+        var param=$(this).prev().text();
+        window.location.href=("nextprod.html?producttype="+param);     
+      })
+
         </script>
     </body>
 </html>

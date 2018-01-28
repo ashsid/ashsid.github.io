@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> -->
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	var native_width = 0;
+	var native_height = 0;
+  $(".large").css("background","url('" + $(".small").attr("src") + "') no-repeat");
+
+	//Now the mousemove function
+	$(".magnify").mousemove(function(e){
+		//When the user hovers on the image, the script will first calculate
+		//the native dimensions if they don't exist. Only after the native dimensions
+		//are available, the script will show the zoomed version.
+		if(!native_width && !native_height)
+		{
+			//This will create a new image object with the same image as that in .small
+			//We cannot directly get the dimensions from .small because of the 
+			//width specified to 200px in the html. To get the actual dimensions we have
+			//created this image object.
+			var image_object = new Image();
+			image_object.src = $(".small").attr("src");
+			
+			//This code is wrapped in the .load function which is important.
+			//width and height of the object would return 0 if accessed before 
+			//the image gets loaded.
+			native_width = image_object.width;
+			native_height = image_object.height;
+		}
+		else
+		{
+			//x/y coordinates of the mouse
+			//This is the position of .magnify with respect to the document.
+			var magnify_offset = $(this).offset();
+			//We will deduct the positions of .magnify from the mouse positions with
+			//respect to the document to get the mouse positions with respect to the 
+			//container(.magnify)
+			var mx = e.pageX - magnify_offset.left;
+			var my = e.pageY - magnify_offset.top;
+			
+			//Finally the code to fade out the glass if the mouse is outside the container
+			if(mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0)
+			{
+				$(".large").fadeIn(100);
+			}
+			else
+			{
+				$(".large").fadeOut(100);
+			}
+			if($(".large").is(":visible"))
+			{
+				//The background position of .large will be changed according to the position
+				//of the mouse over the .small image. So we will get the ratio of the pixel
+				//under the mouse pointer with respect to the image and use that to position the 
+				//large image inside the magnifying glass
+				var rx = Math.round(mx/$(".small").width()*native_width - $(".large").width()/2)*-1;
+				var ry = Math.round(my/$(".small").height()*native_height - $(".large").height()/2)*-1;
+				var bgp = rx + "px " + ry + "px";
+				
+				//Time to move the magnifying glass with the mouse
+				var px = mx - $(".large").width()/2;
+				var py = my - $(".large").height()/2;
+				//Now the glass moves with the mouse
+				//The logic is to deduct half of the glass's width and height from the 
+				//mouse coordinates to place it with its center at the mouse coordinates
+				
+				//If you hover on the image now, you should see the magnifying glass in action
+				$(".large").css({left: px, top: py, backgroundPosition: bgp});
+			}
+		}
+	})
+})
+</script>
+	<style type="text/css">
+		/*Some CSS*/
+* {margin: 0; padding: 0;}
+.magnify {width: 250px; margin: 25px 10px; position: relative; cursor: none}
+
+/*Lets create the magnifying glass*/
+.large {
+	width: 275px; height: 275px;
+	position: absolute;
+	border-radius: 100%;
+	
+	/*Multiple box shadows to achieve the glass effect*/
+	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
+	0 0 7px 7px rgba(0, 0, 0, 0.25), 
+	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+	
+	/*hide the glass by default*/
+	display: none;
+}
+
+/*To solve overlap bug at the edges during magnification*/
+.small { display: block; }
+.sml{
+	height: 70px;
+}
+ #scrolly{
+            /*width: 1100px;*/
+            height: 250px;
+            overflow: auto;
+            overflow-y: hidden;
+            margin: 0 auto;
+            white-space: nowrap;
+        }
+
+        .scroll{
+            width: 200px;
+            height: 200px;
+            margin: 20px 10px;
+            display: inline;
+        }
+        .adj{
+        	padding: 5px;
+        }
+        .checked{
+        	color: orange;
+        }
+        .tab{
+        	padding-right: 25%;
+        }
+        .bottom{
+        	height: 180px;
+        	background: #d39f04;
+        	padding: 5%;
+        	margin-right: 5%;
+        	margin-left: 5%
+        }
+        table, td, th {    
+    		border: 1px solid #ddd;
+    	}
+</style>
+</head>
+<body>
+<div class="container">
+	<nav class="navbar navbar-default">
+	<div class="navbar-header">
+		<a href="#" class="navbar-brand">KRIS</a>
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#abc" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+  </div>
+   <div class="collapse navbar-collapse" id="abc">
+	<ul class="nav navbar-nav">
+		<li><a href="logit.html">Home</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Know More</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#">Log In</a></li>	
+	</ul>
+	</div>
+	</nav>
+	<div class="row">
+	<div class="col-lg-4">	
+	<div class="magnify">
+		<div class="large"></div>
+		<img class="small" src="collections/1.jpg" width="125%"/>
+	</div>
+	</div>
+	<div class="col-lg-4">
+		<table>
+			<ul>
+				<h2><b>KRIS</b></h2>
+				<h2>KRIS BLACK HAND BAG</h2>
+				<h3>Price Rs.1499</h3>
+				<h5>Inclusive of All Tax</h5>
+				<h4><b>Color:</b>Leather Black</h4>
+				<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+			</br>
+				<h5>Available Colors</h5>
+				<img src="collections/1.jpg" class="img-thumbnail sml">
+				<img src="collections/3.jpg" class="img-thumbnail sml">
+			</br>
+		</br>
+				<li>Hand Made</li>
+				<li>Inner Material:Cloth</li>
+				<li>Life Style:Casual</li>
+				<li>Type: Handbag</li>
+			</ul>
+		</table>
+	</div>
+	<div class="col-lg-4">
+		 <button type="button" class="btn btn-warning btn-block btn-lg">Add to Cart</button></br>
+		 <button type="button" class="btn btn-warning btn-block btn-lg">Buy Now</button></br></br>
+		 <button type="button" class="btn btn-defalut btn-block btn-lg">Add to WishList</button>
+	</div>
+</div>
+<hr class="style2">
+<div class="row">
+    <h2>Product Description</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="style2">
+<h3>Customers Also Viewed:</h3>
+<div id='scrolly' class="col-sm-12 col-lg-12">
+        <img class="scroll" src='collections/1.jpg'></img>
+        <img class="scroll" src='collections/2.jpg'></img>
+        <img class="scroll" src='collections/3.jpg'></img>
+        <img class="scroll" src='collections/4.jpg'></img>
+        <img class="scroll" src='collections/5.jpg'></img>
+        <img class="scroll" src='collections/6.jpg'></img>
+    </div>
+    <br>
+	<!-- <hr class="style2"> -->
+    <div class="col-sm-12 adj">
+    <h2>Product Specification</h2>
+    <br>
+    <div class="tab">
+    <table class="table table-hover">
+  <tbody>
+    <tr>
+      <!-- <th scope="row">1</th> -->
+      <td>Product Height</td>
+      <td>30 centimeters</td>
+    </tr>
+    <tr>
+      <!-- <th scope="row">2</th> -->
+      <td>Product Width</td>
+      <td>7 centimeters</td>
+    </tr>
+    <tr>
+      <!-- <th scope="row">3</th> -->
+      <td>Product Length</td>
+      <td>28 centimeters</td>
+    </tr>
+    <tr>
+    	<td>Volume Capacity</td>
+    	<td>15 liters</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+
+</div>
+<div class="bottom">
+	<table>
+	<li>Contact Us</li>
+	<li>Facebook</li>
+	<li>Instagram</li></table>
+</div>
+</body>
+
+</html>
