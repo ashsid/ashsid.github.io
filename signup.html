@@ -100,7 +100,7 @@
     <hr>
         <div class="form-group">
       <div class="row">
-        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required" id="first-name"></div>
         <div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
       </div>          
         </div>
@@ -114,12 +114,12 @@
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required" id="signuppassword2">
         </div>        
         <div class="form-group">
-      <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+      <label class="checkbox-inline"><input type="checkbox" required="required" id="checkbox"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
     </div>
     <div class="form-group">
-            <button type="button" id="signupbtn" class="btn btn-primary btn-lg">Sign Up</button>
+            <button type="button" id="signupbtn" onclick="signup()" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
-  <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
+  <div class="hint-text">Already have an account? <a href="1.html">Login here</a></div>
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">

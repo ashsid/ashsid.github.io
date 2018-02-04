@@ -10,6 +10,7 @@
          <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
         <!-- Our Custom CSS -->
        <style type="text/css">
 body {
@@ -234,9 +235,9 @@ a:hover{color:#fd6900;}
                                 <li><a  style="color:#000;" href="logit.html">Home</a></li>
                                 <li><a  style="color:#000;" href="#">About Us</a></li>
                                 <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#000;">Account <span class="glyphicon glyphicon-user"></span><span class="caret"></span></a>       
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#000;" id="account">Account </a>
         <ul class="dropdown-menu" role="menu">
-                <li><a href="#" >Signout</a></li>
+                <li onclick="logout()"><a href="1.html" >Signout</a></li>
                 <li><a href="#">Change Password</a></li>
               </ul>                
             </li>
@@ -594,5 +595,6 @@ a:hover{color:#fd6900;}
         window.location.href=("nextprod.html?producttype="+param);     
       });
         </script>
+        <script type="text/javascript" src="logit.js"></script>
     </body>
 </html>
