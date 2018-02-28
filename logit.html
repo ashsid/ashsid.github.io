@@ -144,18 +144,8 @@ ul ul a {
 }
 .dropdown-item:hover{color: #fff;
     background: #000;}
-.viewbutton{background-color: #fd6900;border-color: #fd6900;position: absolute;margin-top: 12%;margin-left: 8%;display: inline-block;
-  -webkit-box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 9px rgba(0, 0, 0, .7);
-  -moz-box-shadow: 0px 3px 9px rgba(219, 31, 5, 1), 0px 3px 9px rgba(0, 0, 0, .7);
-  box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 9px rgba(0, 0, 0, .7);
-  text-align: center;
-font-size: 60%;}
-.viewbutton:hover{background-color: #fd6900;border-color: #fd6900;
- -webkit-transition: all .1s ease;
-  -moz-transition: all .1s ease;
-  -ms-transition: all .1s ease;
-  -o-transition: all .1s ease;
-  transition: all .1s ease;}
+.viewbutton{background-color: #fd6900;border-color: #fd6900;position: absolute;margin-top: 12%;margin-left: 8%;}
+.viewbutton:hover{background-color: #fd6900;border-color: #fd6900;}
 a:hover{color:#fd6900;}
 
 /* ---------------------------------------------------
@@ -172,13 +162,22 @@ a:hover{color:#fd6900;}
         display: none;
     }
 }
+@media screen 
+  and (device-width: 480px) 
+  and (device-height: 640px) {
+
+
+#sidebarCollapse span {
+        display: none;
+    }
+}
        </style>
     </head>
     <body>
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3 style="font-family: 'Joti One',sans-serif;">KRIS DESIGNS</h3>
+                    <h3 style="font-family: 'Joti One',sans-serif;">KRIS</h3>
                 </div>
 
                 <ul class="list-unstyled components">
