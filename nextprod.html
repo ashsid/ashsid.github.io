@@ -165,7 +165,7 @@ ul ul a {
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3 style="font-family: 'Joti One',sans-serif;">KRIS DESIGNS</h3>
+                    <h3 style="font-family: 'Joti One',sans-serif;">KRIS </h3>
                 </div>
 
                 <ul class="list-unstyled components">
@@ -209,7 +209,7 @@ ul ul a {
                                 <i class="glyphicon glyphicon-align-left"></i>
                                 <span>Collections</span>
                             </button>
-                            <button type="button" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" style="background-color: #fffde1;color:black;">
+                            <button type="button" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -224,7 +224,7 @@ ul ul a {
                                 <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#000;">Account <span class="glyphicon glyphicon-user"></span><span class="caret"></span></a>       
         <ul class="dropdown-menu" role="menu">
-                <li><a href="#" >Signout</a></li>
+                <li><a href="1.html" >Signout</a></li>
                 <li><a href="#">Change Password</a></li>
               </ul>                
             </li>
@@ -329,6 +329,35 @@ ul ul a {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
         <script type="text/javascript">
+ $('#sidebar, #content').toggleClass('active');
+ $('#navigation').css('margin-left','0px');
+var win=$(this);
+if(win.width()<=768)
+          {
+            var count=0;
+          $('#sidebarCollapse').on('click', function () {
+                    count=count+1;
+                    if(count%2!=0)
+                    {
+                      $('#content').css('opacity',0.3);
+                    }
+                    else
+                    {
+                     $('#content').css('opacity',1.0); 
+                    }
+                    if($('#navigation').css('margin-left')=='250px')
+                    {
+                        $('#navigation').css('margin-left','0px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                    else
+                    {
+                        $('#navigation').css('margin-left','250px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                });
+          }
+
             $(document).ready(function () {
                 $("#sidebar").mCustomScrollbar({
                     theme: "minimal"
@@ -399,6 +428,9 @@ ul ul a {
       window.location.href=("nextprod.html?producttype="+param);      
       });
 
+
+
         </script>
+    <script type="text/javascript" src="logit.js"></script>
     </body>
 </html>

@@ -152,22 +152,13 @@ a:hover{color:#fd6900;}
     MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
-  /*  #sidebar {
-        margin-left: -250px;
+/*    #sidebar {
+        margin-left: 0px;
     }
     #sidebar.active {
-        margin-left: 0;
-    }*/
-    #sidebarCollapse span {
-        display: none;
+        margin-left: -250px;
     }
-}
-@media screen 
-  and (device-width: 480px) 
-  and (device-height: 640px) {
-
-
-#sidebarCollapse span {
+*/    #sidebarCollapse span {
         display: none;
     }
 }
@@ -185,21 +176,21 @@ a:hover{color:#fd6900;}
                     <li class="active">
                         <a href="#menSubmenu" data-toggle="collapse" aria-expanded="false">Men</a>
                         <ul class="collapse list-unstyled" id="menSubmenu">
-                            <li class="change"><a href="#wallets">Wallet</a></li>
-                            <li class="change"><a href="#laptopbags">Laptop bags</a></li>
-                            <li class="change"><a href="#wristbands">Wrist Bands</a></li>
-                            <li class="change"><a href="#cardholders">Visiting card holders</a></li>
-                            <li class="change"><a href="#belts">Belts</a></li>
+                            <li class="change"><a href="#">Wallet</a></li>
+                            <li class="change"><a href="#">Laptop bags</a></li>
+                            <li class="change"><a href="#">Wrist Bands</a></li>
+                            <li class="change"><a href="#">Visiting card holders</a></li>
+                            <li class="change"><a href="#">Belts</a></li>
                         </ul>
                     </li>
                     <li>
                        <a href="#womenSubmenu" data-toggle="collapse" aria-expanded="false">Women</a>
                         <ul class="collapse list-unstyled" id="womenSubmenu">
-                            <li class="change"><a  href="#totebags">Tote</a></li>
-                            <li class="change"><a  href="#satchels">Satchels</a></li>
-                            <li class="change"><a  href="#clutches">Clutches</a></li>
-                            <li class="change"><a  href="#purses">Purses</a></li>
-                            <li class="change"><a  href="#crossbags">Crossbody bags</a></li>
+                            <li class="change"><a  href="#">Tote</a></li>
+                            <li class="change"><a  href="#">Satchels</a></li>
+                            <li class="change"><a  href="#">Clutches</a></li>
+                            <li class="change"><a  href="#">Purses</a></li>
+                            <li class="change"><a  href="#">Crossbody bags</a></li>
                         </ul>
                     </li>
                     <li>
@@ -524,6 +515,34 @@ a:hover{color:#fd6900;}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
         <script type="text/javascript">
+          var win=$(this);
+          if(win.width()<=768)
+          {
+            var count=0;
+          $('#sidebar, #content').toggleClass('active');
+          $('#navigation').css('margin-left','0px');
+          $('#sidebarCollapse').on('click', function () {
+                    count=count+1;
+                    if(count%2!=0)
+                    {
+                      $('#content').css('opacity',0.3);
+                    }
+                    else
+                    {
+                     $('#content').css('opacity',1.0); 
+                    }
+                    if($('#navigation').css('margin-left')=='250px')
+                    {
+                        $('#navigation').css('margin-left','0px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                    else
+                    {
+                        $('#navigation').css('margin-left','250px');
+                        $('#navigation').css('transition','all .3s');
+                    }
+                });
+          }
             $(document).ready(function () {
                 $("#sidebar").mCustomScrollbar({
                     theme: "minimal"
@@ -546,6 +565,8 @@ a:hover{color:#fd6900;}
                 });
                 $('.change').on('click', function () {
                     $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                     if($('#navigation').css('margin-left')=='250px')
                     {
                         $('#navigation').css('margin-left','0px');
